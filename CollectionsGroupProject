@@ -57,3 +57,29 @@ namespace Module7Assignment
                             }
                         }
                         break;
+case "3":
+    Console.Write("Enter the key you want to remove: ");
+    string removeKey = Console.ReadLine();
+
+    if (myDictionary.Remove(removeKey))
+        Console.WriteLine("Key removed.");
+    else
+        Console.WriteLine("Key not found.");
+    break;
+
+case "5":
+    Console.Write("Enter existing key: ");
+    string existingKey = Console.ReadLine();
+
+    if (myDictionary.ContainsKey(existingKey))
+    {
+        Console.Write("Enter value to add: ");
+        string newValue = Console.ReadLine();
+        myDictionary[existingKey].Add(newValue);
+        Console.WriteLine("Value added.");
+    }
+    else
+    {
+        Console.WriteLine("Key not found.");
+    }
+    break;
